@@ -9471,9 +9471,16 @@ var BodyIndex = function (_React$Component) {
 	}
 
 	_createClass(BodyIndex, [{
+		key: 'componentWillMount',
+		value: function componentWillMount() {
+			console.log('this is you bodyindx ');
+		}
+	}, {
+		key: 'componentDidMount',
+		value: function componentDidMount() {}
+	}, {
 		key: 'render',
 		value: function render() {
-
 			var userName = 'shanchao';
 			var boolInput = true;
 			var html = 'shanchao&nbsp;shi&nbsp;tiancai';
@@ -9486,7 +9493,7 @@ var BodyIndex = function (_React$Component) {
 				_react2.default.createElement(
 					'h2',
 					null,
-					'\u9875\u9762\u7684\u4E3B\u4F53\u5185\u5BB9'
+					'\u9875\u9762\u7684\u4E3B\u4F53s\u5185\u5BB9'
 				),
 				_react2.default.createElement(
 					'p',
