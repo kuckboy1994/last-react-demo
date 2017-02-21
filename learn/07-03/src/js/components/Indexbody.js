@@ -1,7 +1,13 @@
 import React from 'react';
 
 export default class BodyIndex extends React.Component {
-	
+	constructor() {
+		super();
+		this.state = {
+			username: 'parry',
+			age: 20
+		}
+	}
 	componentWillMount () {
 		console.log('this is you bodyindx ');
 	}
@@ -11,6 +17,10 @@ export default class BodyIndex extends React.Component {
 	}
 
 	render () {
+		setTimeout(()=>{
+			this.setState({username: "IMOOC", age: 30});
+		}, 4000);
+
 		var userName = 'shanchao';
 		var boolInput = true;
 		var html = 'shanchao&nbsp;shi&nbsp;tiancai';
@@ -19,6 +29,7 @@ export default class BodyIndex extends React.Component {
 		// commit
 		return (
 			<div>
+				<h1>{this.state.username}{this.state.age}</h1>
 				<h2>页面的主体s内容</h2>
 				<p>{userName == '' ? '用户还没存在' : '用户名' + userName}</p>
 				<p><input type='button' value='默认按钮' disabled={boolInput}/></p>

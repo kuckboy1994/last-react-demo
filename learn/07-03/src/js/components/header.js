@@ -4,7 +4,7 @@ export default class ComponentHeader extends React.Component {
 	render () {
 		return (
 			<header>
-				<h1>这里是头部a</h1>
+				<h1>这里是头部a {this.props.userId}</h1>
 			</header>
 		)
 	}

@@ -9467,7 +9467,13 @@ var BodyIndex = function (_React$Component) {
 	function BodyIndex() {
 		_classCallCheck(this, BodyIndex);
 
-		return _possibleConstructorReturn(this, (BodyIndex.__proto__ || Object.getPrototypeOf(BodyIndex)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (BodyIndex.__proto__ || Object.getPrototypeOf(BodyIndex)).call(this));
+
+		_this.state = {
+			username: 'parry',
+			age: 20
+		};
+		return _this;
 	}
 
 	_createClass(BodyIndex, [{
@@ -9481,6 +9487,12 @@ var BodyIndex = function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
+			var _this2 = this;
+
+			setTimeout(function () {
+				_this2.setState({ username: "IMOOC", age: 30 });
+			}, 4000);
+
 			var userName = 'shanchao';
 			var boolInput = true;
 			var html = 'shanchao&nbsp;shi&nbsp;tiancai';
@@ -9490,6 +9502,12 @@ var BodyIndex = function (_React$Component) {
 			return _react2.default.createElement(
 				'div',
 				null,
+				_react2.default.createElement(
+					'h1',
+					null,
+					this.state.username,
+					this.state.age
+				),
 				_react2.default.createElement(
 					'h2',
 					null,
@@ -9618,7 +9636,8 @@ var ComponentHeader = function (_React$Component) {
 				_react2.default.createElement(
 					'h1',
 					null,
-					'\u8FD9\u91CC\u662F\u5934\u90E8a'
+					'\u8FD9\u91CC\u662F\u5934\u90E8a ',
+					this.props.userId
 				)
 			);
 		}
@@ -21916,7 +21935,7 @@ var Index = function (_React$Component) {
 			return React.createElement(
 				'div',
 				null,
-				React.createElement(_header2.default, null),
+				React.createElement(_header2.default, { userId: 123 }),
 				React.createElement(_Indexbody2.default, null),
 				React.createElement(_footer2.default, null)
 			);
